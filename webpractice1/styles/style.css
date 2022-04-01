@@ -1,0 +1,163 @@
+/* 对元素选择器 */
+html{
+    font-size: 16px;
+    /* 文本字体 */
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    background-color:antiquewhite;
+    color: #555555;
+    font-family: Arial, Open Sans, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6em;
+}
+h1{
+    font-weight: bold;
+    color: rgb(35, 61, 109);
+    text-align: center;
+}
+h2{
+    font-weight: bold;
+    color: rgb(35, 61, 109);
+    text-align: center;
+}
+h3{
+    font-weight: bold;
+    color: rgb(35, 61, 109);
+}
+
+p{
+    font-size: 0.5rem;
+    color: #555555;
+    font-weight: bold;
+}
+/* 对类 */
+.container{
+    color: rgba(100, 100, 50, 0.8);
+    background-color: darkgray;
+    font-family:Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+    letter-spacing: 0.5em;
+    word-spacing: 1em; 
+    border: 5px yellowgreen dotted;
+    border-radius: 20px;
+    margin: 10px 0px;
+    padding: 10px;
+}
+/* 对属性 */
+img{
+    margin: 5px 10px 5px 10px;
+    /* 上 右 下 左 */
+    padding: 5px 10px 5px 10px;
+    border: #555555 2px solid;
+    display: block;
+    margin: 0 auto;
+}
+
+.list li{
+     list-style:square;
+}
+
+button{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    margin: 5px;
+    border-radius:5px;
+
+}
+/* 伪Pseudo类选择器 特定状态下的特定元素*/
+button:hover{
+    background-color: bisque;
+}
+button:active{
+    background-color: cornflowerblue;
+}
+
+a{
+   text-decoration: none;
+   color: rgb(187, 187, 247);
+}
+a:hover{
+    color:cornflowerblue;
+}
+a:visited{
+    color: red;
+}
+.clearfix{
+    clear: both;
+}
+.block{
+    float: left;
+    width: 33.3%;
+    border: 2px solid gray;
+    box-sizing: border-box;
+}
+/* 对ID */
+#mian-block{
+    float: left;
+    width: 70%;
+    border: 2px solid gray;
+    box-sizing: border-box;
+}
+#sidebar{
+    float: right;
+    width: 30%;
+    border: 2px solid gray;
+    box-sizing: border-box;
+}
+.list2 li:nth-child(even){
+    background-color:gray;
+    /* nth-child 指定list位置（odd）单数行 even双数行 数字 */
+}
+.list2 li:first-child{
+    background-color: darkgoldenrod;
+    /* first-child 首行 */
+}
+.list2 li:last-child{
+    background-color: aquamarine;
+}
+/* CSS定位方式：
+static静态定位；
+relative相对定位 做偏移 基于原位；
+absolute绝对定位 常用于浮动模块设计 结合relative 在无上下文时参考当前视窗页面做偏移，有时针对父节点做偏移；
+fixed固定定位 相对于窗口；
+sticky  粘性 */
+.box1{
+    color: rgba(100, 100, 50, 0.8);
+    font-family:Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 5px yellowgreen dotted;
+    border-radius: 20px;
+    margin: 10px 0px;
+    padding: 10px
+    /* position:relative; */
+    /* top: 100px; */
+    /* left: 100px; */
+}
+.position-box{
+    width: 500px;
+    height: 500px;
+    border:1px gray solid;
+    position: absolute;
+}
+.position-box h1{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+.position-box h2{
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+#fixed{
+   position:fixed;
+   right: 0;
+   bottom:0;
+}
