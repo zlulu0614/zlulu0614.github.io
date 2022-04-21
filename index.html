@@ -24,9 +24,9 @@
          var y = dt.getFullYear();
          var mt = dt.getMonth() + 1;
          var day = dt.getDate()-1;
-        //  var h = dt.getHours(); //获取时
-        //  var m = dt.getMinutes(); //获取分
-        //  var s = dt.getSeconds(); //获取秒
+         var h = dt.getHours(); //获取时
+         var m = dt.getMinutes(); //获取分
+         var s = dt.getSeconds(); //获取秒
          document.querySelector(".showTime").innerHTML =
            "日报时间：" +
            y +
@@ -34,7 +34,9 @@
            mt +
            "月" +
            day +
-           "日" ;
+           "日" +
+            h +
+            "时";
          t = setTimeout(time, 100); //设定定时器，循环运行
        }
       </script>
