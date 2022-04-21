@@ -1,0 +1,396 @@
+/* CSS初始化 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 给所有li去掉初始化标点 */
+li {
+  list-style: none;
+}
+a {
+ font-size: 0.1rem;
+ color: #fff;
+ text-decoration: none;
+}
+a:active{
+  color:#02a6b5;
+}
+a:hover {
+  border-bottom: 1px solid;
+  background: #2f89cf;
+}
+
+body{
+    background: url(../images/bg.jpg) no-repeat top center; 
+    width: 100%;
+    height: 100%;
+    /* 滚动条可视化 */
+    overflow: visible;
+}
+.header{
+    position: relative;
+}
+.header .back{
+    height: 1.25rem;
+    background: url(../images/head_bg.png)
+    no-repeat;
+    top: 0%;
+    background-size: 100% 100%;
+}
+.header h1{
+  color: white;
+  text-align: center;
+  line-height: 1rem;
+  font-size: 0.5rem;
+}
+.header .logo{
+    background: url(../images/feidi.png)  no-repeat; 
+    position: absolute;
+    width: 2.5rem;
+    height: 0.6rem;
+    top: 10%;
+    left: 2%;
+    background-size: 100% 100%;
+ }
+.header .showTime {
+  position: absolute;
+  right: 0.375rem;
+  top: 0.125rem;
+  line-height: 0.9375rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 800;
+  font-size: 0.25rem;
+}
+.mainbox{
+    display: flex;
+    min-width: 1080px; 
+    max-width: 1920px; 
+    margin: 0 auto;
+    padding: .125rem  .125rem 0;
+}
+/* 图片1 */
+.column .w5 {
+  width: 6rem;
+  height: 3.5rem;
+  position: absolute;
+  /* 保证水平垂直居中 */
+  top:85%;
+  right:0%;
+  background:url(../images/w5.png) no-repeat;
+  background-size: 100% 100%;
+  opacity: 40%;
+}
+/* 三个区域 */
+.mainbox .column { 
+    flex: 3;
+}
+/* 模块标题 */
+.part{
+  font-size: 0.3rem;
+  color: #fff;
+}
+/* panel标题 */
+.part1{
+  font-size: 0.20rem;
+  color: #fff;
+  text-align: center;
+  line-height: 0.35rem;
+}
+/* 左区域 */
+.mainbox .column:nth-child(1) {
+  flex: 3;
+  margin: 0rem  0.125rem 0.1875rem;
+}
+/* 中间区域 */
+.mainbox .column:nth-child(2) {
+  flex: 5;
+  margin: 0rem 0.125rem 0.1875rem;
+}
+/* 右 */
+.mainbox .column:nth-child(3) {
+  flex: 3;
+  margin: 0rem  0.125rem 0.1875rem;
+}
+.mainbox .panel {
+    /* 公共样式 */
+    position: relative;
+    height: 3.75rem;
+    margin-top: 0.125rem;
+    padding: 0 0.1875rem 0.5rem;
+    /*上 左右 下 */
+    border: 1px solid rgba(72, 15, 228, 0.17);
+    margin-bottom: 0rem;
+    /* 给定背景图片 */
+    background: url(../images/line\(1\).png) rgba(255, 255, 255, 0.03);
+}
+/* 边框 */
+/* 边框左上角 */
+.mainbox .panel::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #02a6b5;
+    border-top: 2px solid #02a6b5;
+    content: "";
+  }
+/* 边框右上角 */
+.mainbox .panel::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #02a6b5;
+    border-top: 2px solid #02a6b5;
+    content: "";
+  }
+/* 盒内盒子以设计左下角 右下角 */
+.mainbox .panel .panel-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+.mainbox .panel .panel-footer::before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #02a6b5;
+    border-bottom: 2px solid #02a6b5;
+    content: "";
+  }
+.mainbox .panel .panel-footer::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #02a6b5;
+    border-bottom: 2px solid #02a6b5;
+    content: "";
+  }
+  /* 表框 */
+.mainbox .panel .chart {
+    height: 3rem;
+  }
+  /* no数字模块 */
+.no {
+    margin-top: 0.125rem;
+    background: rgba(101, 132, 226, 0.1);
+    padding: 0.1875rem;
+  }
+  /* no头部 */
+.no .no-hd {
+    position: relative;
+    border: 1px solid  rgba(101, 132, 226, 0.1);
+  }
+  /* 利用before和after给hd装饰 */
+.no .no-hd::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 30px;
+    height: 10px;
+    border-top: 2px solid #02a6b5;
+    border-left: 2px solid #02a6b5;
+  }
+.no .no-hd::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    content: "";
+    width: 30px;
+    height: 10px;
+    border-right: 2px solid #02a6b5;
+    border-bottom: 2px solid #02a6b5;
+  }
+/*  */
+.no .no-hd ul {
+  display: flex;
+}
+  /* status模块 */
+  .status {
+    margin-top: 0.1rem;
+    background: rgba(101, 132, 226, 0.1);
+    padding: 0.1875rem;
+  }
+  /* no头部 */
+.status .status-hd {
+    position: relative;
+    border: 1px solid  rgba(101, 132, 226, 0.1);
+    height: 3.75rem;
+  }
+  /* 利用before和after给hd装饰 */
+.status .status-hd::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 30px;
+    height: 10px;
+    border-top: 2px solid #02a6b5;
+    border-left: 2px solid #02a6b5;
+  }
+.status .status-hd::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    content: "";
+    width: 30px;
+    height: 10px;
+    border-right: 2px solid #02a6b5;
+    border-bottom: 2px solid #02a6b5;
+  }
+
+
+/* 给li加父节点以实现多个li的水平分布 */
+.status .status-hd ol {
+    display: inline;
+  }
+
+.status .status-hd ol li{
+  margin-top: 0.15rem;
+  margin-left: 0.25rem;
+  line-height: 0.275rem;
+  font-size: 0.2rem;
+  color:rgb(255, 255, 255);;
+  font-family:Arial, Helvetica, sans-serif;
+  }
+p{
+  font-size: 0.12rem; 
+  margin-left: 0.75rem;
+  color: #fff;
+}
+  /* 外字体声明 */
+@font-face {
+    font-family: electronicFont;
+    src: url(../font/DS-DIGIT.TTF);
+  }
+.no .no-hd ul li {
+    position: relative;
+    /* 每个li各占一份 */
+    flex: 1;
+    line-height: 1rem;
+    font-size: 0.8rem;
+    color:rgba(22, 252, 22, 0.658);
+    font-weight: 800;
+    text-align: center;
+    font-family: "electronicFont";
+  }
+  /* 加竖杠 after伪元素*/
+.no .no-hd ul li:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    top: 25%;
+    /* 贴右边 */
+    right: 0;
+    height: 50%;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  /* no底部 */
+.no .no-bd ul {
+    display: flex;
+  }
+.no .no-bd ul li {
+    flex: 1;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    font-size: 0.25rem;
+    height: 0.5rem;
+    line-height: 0.375rem;
+    padding-top: 0.125rem;
+  }
+ /* 动态地图 */
+.map {
+  height: 5rem;
+  position: relative;
+}
+/* 图片1 */
+.map .map1 {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  /* 保证水平垂直居中 */
+  top:2.5rem;
+  left:50%;
+  transform:translate(-50%, -50%); 
+  background:url(../images/map.png);
+  /* 保证缩放 */
+  background-size: 100% 100%;
+  /* 透明度 */
+  opacity:0.4;
+}
+/* 图片2 */
+/* 声明旋转 */
+@keyframes rotate1 {
+  form {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  /* translate 固定 以保证相对位置不动 */
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.map .map2 {
+  position: absolute;
+  top: 2.5rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4rem;
+  height: 4rem;
+  background: url(../images/lbx.png);
+  /* 动画效果 */
+  animation: rotate1 15s linear infinite;
+  opacity: 0.9;
+  background-size: 100% 100%;
+}
+/* 图片3 */
+/* 声明旋转 */
+@keyframes rotate2 {
+  form {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+.map .map3 {
+  position: absolute;
+  top: 2.5rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3.25rem;
+  height: 3.25rem; 
+  background: url(../images/jt.png);
+  animation: rotate2 10s linear infinite;
+  opacity: 1;
+  background-size: 100% 100%;
+}
+/* 大地图 */
+.map .chart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* 全覆盖 */
+  width: 100%;
+  height: 5rem;
+}
+
+/* 约束屏幕尺寸 */
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 42px !important;
+  }
+}
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 80px !important;
+  }
+}

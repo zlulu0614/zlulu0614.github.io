@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- 引入CSS文件 -->
+    <link rel="stylesheet" href="css/index.css"/>
+    <title>数据可视化 🦜</title>
+  </head>
+  <body>
+   <!-- 头部 -->
+ <div class="header">
+   <div class="back">
+   <h1>汽车制造基地运行日报</h1>
+  </div>
+   <div class="logo"></div>
+     <div class="showTime"></div>
+      <script>
+       var t = null;
+       t = setTimeout(time, 100); //開始运行
+       function time() {
+         clearTimeout(t); //清除定时器
+         dt = new Date();
+         var y = dt.getFullYear();
+         var mt = dt.getMonth() + 1;
+         var day = dt.getDate()-1;
+        //  var h = dt.getHours(); //获取时
+        //  var m = dt.getMinutes(); //获取分
+        //  var s = dt.getSeconds(); //获取秒
+         document.querySelector(".showTime").innerHTML =
+           "日报时间：" +
+           y +
+           "年" +
+           mt +
+           "月" +
+           day +
+           "日" ;
+         t = setTimeout(time, 100); //设定定时器，循环运行
+       }
+      </script>
+  </div>
+   <!-- 页面主体部分 -->
+  <div class="mainbox">
+     <!-- 划分三部分 -->
+     <!--左部公共布局 -->
+   <div class="column">
+    <div class="w5"></div>
+     <div class="part"> 
+      >> 质量 << 
+     </div> 
+      <!-- 柱形图 -->
+      <div class="panel bar1"> 
+      <!-- <div class="title">FTQ(一次检验合格率)</div> -->
+      <div class="part1">FTQ(一次检验合格率)
+        <br>
+          <a href="javascript:;">2020</a>
+          <a href="javacript:;"> 2021</a>
+      </div>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+       <!-- 折线图-->
+       <div class="panel line1"> 
+        <div class="part1">FTQ(一次检验合格率)
+            <a href="javascript:;">2020</a>
+            <a href="javacript:;"> 2021</a>
+        </div>
+        
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+       <!-- 折线图 -->
+       <div class="panel line2"> 
+        <div class="part1">FTQ(一次检验合格率)
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+        </div>
+       </div>
+    </div>
+    <!-- 中间布局-->
+    <div class="column">
+      <div class="part"> 
+        >> 安全 << 
+       </div> 
+     <!-- no模块制作 -->
+     <div class="no">
+       <!-- 数字 -->
+       <div class="no-hd">
+         <ul>
+          <li>0</li>
+          <li>98%</li>
+         </ul>
+       </div>
+      <!-- 文字 -->
+       <div class="no-bd">
+         <ul>
+          <li>安全事故发生数</li>
+          <li>车间出勤率</li>
+         </ul>
+       </div>
+     </div>
+     <!-- 地图模块 -->
+     <div class="map">
+       <div class="map1"></div>
+       <div class="map2"></div>
+       <div class="map3"></div>
+       <div class="chart"></div>
+     </div>
+    <div class="part">
+      >> 基地日常工作<<
+    </div>
+    <div class="status">
+      <!-- 数字 -->
+      <div class="status-hd">
+       <div class="box">
+         <ol>
+          <li>质量部<p>质量部组织开展基地2022年一季度QC发表活动，搭建学习交流平台，调动了员工活动的积极性。</p></li> 
+          <li>质量部<p>质量部组织开展基地2022年一季度QC发表活动，搭建学习交流平台，调动了员工活动的积极性。</p> </li> 
+          <li>质量部<p>质量部组织开展基地2022年一季度QC发表活动，搭建学习交流平台，调动了员工活动的积极性。</p></li> 
+          <li>质量部<p>质量部组织开展基地2022年一季度QC发表活动，搭建学习交流平台，调动了员工活动的积极性。</p> </li> 
+          <li>质量部<p>质量部组织开展基地2022年一季度QC发表活动，搭建学习交流平台，调动了员工活动的积极性。</p> </li> 
+         </ol>
+        </div>
+
+
+
+
+      </div>
+     </div>
+    </div>
+    <!--右公共布局 -->
+    <div class="column">
+      <div class="part">
+        >> 质量 <<
+      </div>
+      <div class="panel bar2"> 
+      <div class="part1">技能掌握分布</div>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+       <!-- 柱形图 -->
+       <div class="panel bar3"> 
+        <div class="part1">总装车间计划完成率</div>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+       <!-- 饼图 -->
+       <div class="panel pie2"> 
+        <div class="part1">车间一线员工分布</div>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+  </div>
+   <!-- 引入flexible.js文件已进行屏幕适配 -->
+   <script src="js/flexible.js"></script>
+   <!-- 引入Echarts 插件-->
+   <script src="js/echarts.min.js"></script>
+   <!-- 先引入jquery -->
+   <script src="js/jquery.js"></script>
+   <!-- 必须先引入china.js 这个文件 因为中国地图需要 -->
+   <script src="js/china.js"></script>
+   <script src="js/myMap.js"></script>
+   <script src="js/index.js"></script>
+  </body>
+</html>
