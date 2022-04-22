@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!-- 引入CSS文件 -->
     <link rel="stylesheet" href="css/index.css"/>
-    <title>数据可视化 🦜</title>
+    <title>基地运行数据可视化 🦜</title>
   </head>
   <body>
    <!-- 头部 -->
@@ -34,9 +34,7 @@
            mt +
            "月" +
            day +
-           "日" +
-            h +
-            "时";
+           "日" ;
          t = setTimeout(time, 1000); //设定定时器，循环运行
        }
       </script>
@@ -54,9 +52,8 @@
       <div class="panel bar1"> 
       <!-- <div class="title">FTQ(一次检验合格率)</div> -->
       <div class="part1">FTQ(一次检验合格率)
-        <br>
-          <a href="javascript:;">2020</a>
-          <a href="javacript:;"> 2021</a>
+          <a href="javascript:;">2019</a>
+          <a href="javacript:;"> 2020</a>
       </div>
         <div class="chart"></div>
         <div class="panel-footer"></div>
@@ -116,24 +113,20 @@
       <div class="status-hd">
        <div class="box">
          <ol>
-          <li>质量部<p>质量部组织开展基地2022年一季度QC发表活动，搭建学习交流平台，调动了员工活动的积极性。</p></li> 
-          <li>质量部<p>质量部组织开展基地2022年一季度QC发表活动，搭建学习交流平台，调动了员工活动的积极性。</p> </li> 
-          <li>质量部<p>质量部组织开展基地2022年一季度QC发表活动，搭建学习交流平台，调动了员工活动的积极性。</p></li> 
-          <li>质量部<p>质量部组织开展基地2022年一季度QC发表活动，搭建学习交流平台，调动了员工活动的积极性。</p> </li> 
-          <li>质量部<p>质量部组织开展基地2022年一季度QC发表活动，搭建学习交流平台，调动了员工活动的积极性。</p> </li> 
+          <li>质  量  部<p>质量部组织开展基地2022年一季度QC发表活动，搭建学习交流平台，调动了员工活动的积极性。</p></li> 
+          <li>冲压车间<p>冲压车间组织员工学习车间将库存方案，强调严格按照生产批次量和安全库存量来执行生产任务。</p> </li> 
+          <li>车架车间<p>车架车间工程师对新调整的缔途车架第三横梁焊接夹具焊接件进行车架装配验证，保证车架质量。</p></li> 
+          <li>焊装车间<p>焊装车间组织进行W5车身的车间内部评审，对评审的问题进行记录并划分相关责任班组进行整改。</p> </li> 
+          <li>总装车间<p>总装车间组织召开A/B线爬坡问题识别会，对瓶颈工序及瓶颈点进行识别并统计，提升爬坡速度。</p> </li> 
          </ol>
         </div>
-
-
-
-
       </div>
      </div>
     </div>
     <!--右公共布局 -->
     <div class="column">
       <div class="part">
-        >> 质量 <<
+        >> 交期 <<
       </div>
       <div class="panel bar2"> 
       <div class="part1">技能掌握分布</div>
@@ -160,9 +153,6 @@
    <script src="js/echarts.min.js"></script>
    <!-- 先引入jquery -->
    <script src="js/jquery.js"></script>
-   <!-- 必须先引入china.js 这个文件 因为中国地图需要 -->
-   <script src="js/china.js"></script>
-   <script src="js/myMap.js"></script>
    <script src="js/index.js"></script>
   </body>
 </html>
