@@ -23,10 +23,10 @@ a:hover {
 
 body{
     background: url(../images/bg.jpg) no-repeat top center; 
-    width: 100%;
-    height: 100%;
     /* 滚动条可视化 */
     overflow: visible;
+    width: 100%;
+    height: 100%;
 }
 .header{
     position: relative;
@@ -385,9 +385,9 @@ p{
 }
 
 /* 约束屏幕尺寸 */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1080px) {
   html {
-    font-size: 42px !important;
+    font-size: 45px !important;
   }
 }
 @media screen and (min-width: 1920px) {
@@ -395,5 +395,4 @@ p{
     font-size: 80px !important;
   }
 }
-  }
-}
+
