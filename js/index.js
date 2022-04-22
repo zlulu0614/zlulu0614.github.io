@@ -45,14 +45,7 @@
     xAxis: [
       {
         type: "category",
-        data: [
-          "旅游行业",
-          "教育培训",
-          "游戏行业",
-          "医疗行业",
-          "电商行业",
-          "社交行业",
-          "金融行业"
+        data: ["4月1日","4月2日","4月3日","4月4日","4月5日","4月6日","4月7日"
         ],
         axisTick: {
           alignWithLabel: true
@@ -270,16 +263,16 @@
     },
     grid:{
       left: "0%",
-      top: "14%",
+      top: "20%",
       right: "0%",
-      bottom: "10%",
+      bottom: "5%",
       //显示刻度标签
       containLabel: true
     },
     xAxis: [
       {
         type: 'category',
-        data: ['4/1', '4/2', '4/3', '4/4', '4/5', '4/6', '4/7'],
+        data: ['4/8', '4/11', '4/12', '4/13', '4/14', '4/18', '4/19'],
         axisTick: {
           alignWithLabel: true
         },
@@ -304,9 +297,9 @@
           fontWeight: "bold",
           color: "rgba(255, 255, 255, 1)"
         },
-        min: 0,
-        max: 300,
-        interval: 60,
+        // min: 0,
+        // max: 300,
+        interval: 100,
         axisLabel: {
           formatter: '{value} ',
           color: "rgba(255,255,255,1) ",
@@ -332,9 +325,9 @@
       {
         type: 'value',
         name: '运行效率%',
-        min: 50,
-        max: 100,
-        interval: 10,
+        // min: 50,
+        // max: 100,
+        interval: 25,
         nameTextStyle: {
           fontWeight: "bold",
           color: "rgba(255, 255, 255, 1)"
@@ -370,7 +363,7 @@
             return value + ' %';
           }
         },
-        data: [100,100,98,100,105]
+        data: [100,130,105,100,127,100,100]
       },
       {
         name: '累计产量',
@@ -381,7 +374,7 @@
             return value + '台';
           }
         },
-        data: [20,30,50,100,150],
+        data: [155,168,231,269,238,370,414],
         itemStyle: {
           // 修改柱子圆角
           barBorderRadius: 3
@@ -405,8 +398,8 @@
       year: "2020", // 年份
       data: [
         // 两个数组是因为有两条线
-        [24, 40, 101, 134, 90, 230, 210, 230, 120, 230, 210, 120],
-        [40, 64, 191, 324, 290, 330, 310, 213, 180, 200, 180, 79]
+        [88,88,88,88,88,88,88],
+        [91.1,90.9,93.2,90.5,82.5,90.6,91.7]
       ]
     },
     {
@@ -423,7 +416,7 @@
   // 2.指定配置
   var option = {
     // 通过这个color修改两条线的颜色
-    color: ["#00f2f1", "#ed3f35"],
+    color: ["orange", "#2f89cf"],
     tooltip: {
       trigger: "axis"
     },
@@ -431,7 +424,7 @@
       // 如果series 对象有name 值，则 legend可以不用写data
       // 修改图例组件 文字颜色
       textStyle: {
-        color: "#4c9bfd"
+        color: "#fff"
       },
       // 这个10% 必须加引号
       // position:'center'
@@ -439,7 +432,7 @@
 
     },
     grid: {
-      top: "10%",
+      top: "20%",
       left: "3%",
       right: "4%",
       bottom: "3%",
@@ -451,20 +444,8 @@
     xAxis: {
       type: "category",
       boundaryGap: false,
-      data: [
-        "1月",
-        "2月",
-        "3月",
-        "4月",
-        "5月",
-        "6月",
-        "7月",
-        "8月",
-        "9月",
-        "10月",
-        "11月",
-        "12月"
-      ],
+      data:["4月1日","4月2日","4月3日","4月4日","4月5日","4月6日","4月7日"
+    ],
       axisTick: {
         show: false // 去除刻度线
       },
@@ -476,7 +457,13 @@
       }
     },
     yAxis: {
+      min:60,
       type: "value",
+      name:"百分比%",
+      nameTextStyle: {
+        fontWeight: "bold",
+        color: "rgba(255, 255, 255, 1)"
+      },
       axisTick: {
         show: false // 去除刻度线
       },
@@ -494,18 +481,28 @@
     },
     series: [
       {
-        name: "新增粉丝",
+        name: "FTQ目标值",
         type: "line",
         // true 可以让我们的折线显示带有弧度
-        smooth: true,
-        symbol:'rect',
-        symbolSize: 5,
+        // smooth: true,
+        tooltip: {
+          valueFormatter: function (value) {
+            return value + ' %';
+          }
+        },
+        symbol:'diamond',
+        symbolSize: 8,
         data: yearData[0].data[0]
       },
       {
-        name: "新增游客",
+        name: "FTQ实际值",
         type: "line",
-        smooth: true,
+        // smooth: true,
+        tooltip: {
+          valueFormatter: function (value) {
+            return value + ' %';
+          }
+        },
         symbol:'diamond',
         symbolSize: 8,
         data: yearData[0].data[1]
