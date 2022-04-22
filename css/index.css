@@ -224,7 +224,7 @@ body{
 .status .status-hd {
     position: relative;
     border: 1px solid  rgba(101, 132, 226, 0.1);
-    height: 3.75rem;
+    height: 3.34rem;
   }
   /* 利用before和after给hd装饰 */
 .status .status-hd::before {
@@ -255,16 +255,17 @@ body{
   }
 
 .status .status-hd ol li{
-  margin-top: 0.15rem;
-  margin-left: 0.25rem;
-  line-height: 0.275rem;
+  margin-top: 0.2rem;
+  margin-left:0.3rem;
+  line-height: 0.45rem;
   font-size: 0.2rem;
   color:rgb(255, 255, 255);;
   font-family:Arial, Helvetica, sans-serif;
   }
 p{
+  display: inline;
   font-size: 0.12rem; 
-  margin-left: 0.75rem;
+  margin-left: 1rem;
   color: #fff;
 }
   /* 外字体声明 */
@@ -309,7 +310,7 @@ p{
   }
  /* 动态地图 */
 .map {
-  height: 5rem;
+  height: 5.4rem;
   position: relative;
 }
 /* 图片1 */
@@ -392,5 +393,7 @@ p{
 @media screen and (min-width: 1920px) {
   html {
     font-size: 80px !important;
+  }
+}
   }
 }
